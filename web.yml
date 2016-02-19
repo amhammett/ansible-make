@@ -1,0 +1,25 @@
+---
+- hosts: all
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: web server folder structure
+      file:
+        state: directory
+        path: "{{item}}"
+      with_items:
+        - foo
+        - bar
+        - foobar/me
+      when: false
+
+    - name: clone repo
+      git:
+        repo: "git://git@example.com"
+        dest: "foobar/me/too"
+      when: false
+
+    - name: run server
+      shell: >
+        ./foobar/me/too/start.sh asdf
+      when: false
