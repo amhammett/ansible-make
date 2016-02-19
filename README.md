@@ -10,3 +10,15 @@ consistently by a development team or by your ci/cd tools.
 ## installing make
 make comes pre-installed on most linux distros. If it isn't you can easily add it by 
 ```sudo apt-get install build-essential``` on a debian/ubuntu host
+
+## getting started
+
+start by creating a Makefile
+
+    # Makefile
+
+    hello-world:
+    # you have to start somewhere
+    	@echo hello world
+
+running `make hello-world` will echo out "hello world"...
