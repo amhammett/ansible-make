@@ -22,3 +22,15 @@ start by creating a Makefile
     	@echo hello world
 
 running `make hello-world` will echo out "hello world"...
+
+with that out of the way, how about some real-world examples?
+
+## simple ansible
+
+suppose you want to run a run a playbook to push out the latest configuration for a webserver.
+
+    # Makefile
+
+    deploy-web
+    # push out web server configuration
+    	ansible-playbook web.yml -i localhost,
