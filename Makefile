@@ -68,7 +68,7 @@ run-playbook-with-vault:
 dynamic-inventory-clear-cache:
 ## clear dynamic inventory cache
 ## > dynamic-inventory-clear-cache
-	AWS_PROFILE=$(account) ./inventory/ec2.py --refresh-cache > /dev/null
+	AWS_PROFILE=$(account) ./inventory-ec2.sh --refresh-cache
 
 ec2-create-instance:
 ## create an ec2 instance
